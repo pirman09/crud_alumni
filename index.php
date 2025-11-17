@@ -14,6 +14,7 @@
     <a href="tambah.php" class="btn_tambah">+ Tambah Data</a>
     <table>
         <tr>
+            <th>Id</th>
             <th>Nama</th>
             <th>NIK</th>
             <th>NISN</th>
@@ -28,6 +29,7 @@
         $result = mysqli_query($conn, "SELECT * FROM alumni");
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>
+                <td>{$row['id']}</td
                 <td>{$row['nama']}</td>
                 <td>{$row['nik']}</td>
                 <td>{$row['nisn']}</td>
@@ -45,5 +47,6 @@
         ?>
     </table>
 </body>
+
 
 </html>
