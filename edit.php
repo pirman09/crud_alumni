@@ -28,11 +28,12 @@ if (isset($_POST['update'])) {
 <body>
     <h2>Edit Data Alumni</h2>
     <form method="POST" class="data11">
-        <input type="text" name="nama" value="<?= $data['nama'] ?>" required>
-        <input type="text" name="nik" value="<?= $data['nik'] ?>" required>
-        <input type="text" name="nisn" value="<?= $data['nisn'] ?>" required>
-        <input type="text" name="tempat_lahir" value="<?= $data['tempat_lahir'] ?>" required>
-        <input type="date" name="tanggal_lahir" value="<?= $data['tanggal_lahir'] ?>" required>
+        <input type="text" name="nama" placeholder="Nama" value="<?= $data['nama'] ?>" required>
+        <input type="text" name="nik" placeholder="Nik" value="<?= $data['nik'] ?>" required>
+        <input type="text" name="nisn" placeholder="Nisn" value="<?= $data['nisn'] ?>" required>
+        <input type="text" name="tempat_lahir" placeholder="Tempat lahir" value="<?= $data['tempat_lahir'] ?>" required>
+        <input type="date" name="tanggal_lahir" placeholder="Tanggal lahir" value="<?= $data['tanggal_lahir'] ?>"
+            required>
         <select name="jurusan" required>
             <option value="<?= $data['jurusan'] ?>"><?= $data['jurusan'] ?></option>
             <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
@@ -41,12 +42,12 @@ if (isset($_POST['update'])) {
             <option value="Animasi">Animasi</option>
         </select>
         <textarea name="alamat" required><?= $data['alamat'] ?></textarea>
-        <input type="number" name="tahun_lulus" value="<?= $data['tahun_lulus'] ?>" required>
+        <input type="number" name="tahun_lulus" placeholder="Tahun lulus" value="<?= $data['tahun_lulus'] ?>" required>
         <button type="submit" name="update">Update</button>
     </form>
 
     <?php if ($pesan): ?>
-        <p><?= $pesan ?></p>
+    <p><?= $pesan ?></p>
     <?php endif; ?>
 </body>
 
